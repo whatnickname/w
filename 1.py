@@ -10,6 +10,9 @@ def home():
 if __name__ == '__main__':  
    app.run()
 
+def handler(environ, start_response):
+    return app(environ, start_response)
+
 @app.route('/소리')
 def 소리():
    return render_template("소리.html")
