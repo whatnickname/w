@@ -7,6 +7,9 @@ app = Flask(__name__)
 def home():
    return render_template("report.html")
 
+if __name__ == '__main__':  
+   app.run()
+
 @app.route('/소리')
 def 소리():
    return render_template("소리.html")
@@ -51,5 +54,4 @@ def house_info(index):
 
    return render_template("house_info.html", location=location, cleaness=cleaness, built_in=built_in, photo=photo)
 
-if __name__ == '__main__':  
-   app.run(debug=True)
+
